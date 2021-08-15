@@ -1,0 +1,29 @@
+<nav id="global-nav" class="nav">
+  <div class="container-navbar">
+    <div class="pull-left"><h1 class="site-title">Site Title</div>
+    <div class="pull-right">
+      <ul class="nav-list">
+        <li>Link One</li>
+        <li>Link Two</li>
+        <li>Link Three</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  $(document).ready(function(){
+    var scrollTop = 0;
+    $(window).scroll(function(){
+      scrollTop = $(window).scrollTop();
+       $('.counter').html(scrollTop);
+
+      if (scrollTop >= 100) {
+        $('#global-nav').addClass('scrolled-nav');
+      } else if (scrollTop < 100) {
+        $('#global-nav').removeClass('scrolled-nav');
+      }
+
+    });
+
+  });
+</script>
